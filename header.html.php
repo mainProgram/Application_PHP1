@@ -17,7 +17,7 @@
         <ul class="ul2">
             <a href="login.html.php">Sign In<img src="../img/undraw_authentication_re_svpt.svg" alt="" srcset=""></a>
             <form action="../controllers/security.php" method="post">
-                <button type="submit">Sign Out
+                <button type="submit" name="deconnexion">Sign Out
                     <img src="../img/undraw_travel_mode_re_2lxo.svg" alt="" srcset="">
                 </button>
             </form>
@@ -27,3 +27,4 @@
         <video muted autoplay loop>
             <source src='../img/pexels-mart-production-7565825.mp4' type='video/mp4'>
         </video>
+        

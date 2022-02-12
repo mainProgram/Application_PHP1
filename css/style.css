@@ -100,7 +100,7 @@ video{
     align-items: center;
     color: white;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
 }
 .login *, .register *{
     margin-bottom: 4%;
@@ -110,11 +110,11 @@ video{
 }
 .register{
     height: 90%;
-    padding: 2%;
+    padding: 1%;
     width: 40%;
 }
 .register img{
-    width: 260px;
+    width: 200px;
 }
 .register option{
     color: rgb(166, 92, 235);
@@ -132,4 +132,8 @@ h1{
 }
 .showUser h1{
     font-size: 20px;
+}
+.error{
+    font-size: 14px;
+    color: red;
 }
