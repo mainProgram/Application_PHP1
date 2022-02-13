@@ -1,6 +1,5 @@
 <?php
     include_once "../header.html.php";
-    session_start();
 
     echo '
     <form class="register" method="post" action="../controllers/security.php">';
@@ -12,10 +11,6 @@
             echo "<p style = 'font-size:25px;color: red;margin-top:-2%;'>".$_SESSION["error_registration"]."</p>";
             unset($_SESSION["error_registration"]);
         }
-        elseif(isset($_SESSION["success_registration"])){
-            echo "<p style = 'font-size:25px;color: green;margin-top:-2%;'>".$_SESSION["success_registration"]."</p>";
-            unset($_SESSION["success_registration"]);
-        }
         echo '
             <img src="../img/undraw_sign_in_re_o58h.svg">';
 
@@ -26,7 +21,7 @@
         echo'
             <section>
                 <label for="email">Enter Your Email</label>
-                <input type="text" value="';if(isset($_SESSION["email"]))echo$_SESSION["email"];  echo'" name="email" id="email" >
+                <input type="text" name="email" id="email" >
             </section>';
             if(isset($_SESSION["error_password"])){
                 echo "<p style = 'font-size:20px;color: red;margin-top:-5%;'>".$_SESSION["error_password"]."</p>";
@@ -56,5 +51,5 @@
             <input type="submit" value="Register" name="inscription">
         </form>
         ';
-        session_destroy();
-?>
+    include_once "../footer.html.php";
+ ?>

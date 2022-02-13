@@ -127,6 +127,12 @@ h1{
     position: relative;
 }
 
+.showUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .showUser img{
     width: 200px;
 }
@@ -136,4 +142,18 @@ h1{
 .error{
     font-size: 14px;
     color: red;
+}
+
+table, td, tr{
+    border: 2px solid white;
+}
+table{
+    border-collapse:collapse; 
+    border-spacing:0;
+}
+
+td, th{
+    width: 300px;
+    padding: 2%;
+    text-align: center;
 }

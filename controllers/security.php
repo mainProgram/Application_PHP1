@@ -5,6 +5,8 @@
 
     $file = "/opt/lampp/htdocs/Application_PHP1/registration.json";
     $tabAllUsers = get_all_users($file);
+    $_SESSION["email"] = $email;
+    $_SESSION["role"] = are_u_user_or_admin($email, $tabAllUsers);
 
 
     if(isset($seConnecter)){
@@ -33,13 +35,20 @@
                         "password" => $password,
                         "role" => $role
                     );
-                    if(add_user($newRegistration, $file))
-                        $_SESSION["success_registration"] = "You are registered";
-                    else
+                    if(!add_user($newRegistration, $file))
                         $_SESSION["error_registration"] = "Error ! try again.";
+                    else{
+                        $_SESSION["success_registration"] = "You have registered !";
+                        if($role == "admin")
+                            header("Location:../views/accueil.admin.html.php");
+                        else
+                            header("Location:../views/accueil.visiteur.html.php");
+                    }
                 }
-                else
+                else{
                     $_SESSION["error_mail"] = "Mail address already used !";          
+                    header("Location:../views/register.html.php");
+                }
             }
             else{
                 if(!is_mail_valid($email))
@@ -48,8 +57,8 @@
                     $_SESSION["error_confirmPassword"] = "Passwords don't match !";  
                 if(strlen($password)<8)    
                     $_SESSION["error_password"] = "The password should contain at least 8 characters!";  
+                header("Location:../views/register.html.php");
             }
-            header("Location:../views/register.html.php");
         }
         else{
             $_SESSION["error"] = "Please fill all the inputs !";

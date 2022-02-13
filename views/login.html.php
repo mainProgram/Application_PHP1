@@ -1,6 +1,5 @@
 <?php
     include_once "../header.html.php";
-    session_start();
 
     echo '
         <form class="login" method="post" action="../controllers/security.php">';
@@ -12,7 +11,7 @@
         <img src="../img/undraw_authentication_re_svpt.svg">
             <section>
                 <label for="email">Enter Your Email</label>
-                <input type="text" value="';if(isset($_SESSION["email"]))echo$_SESSION["email"];  echo'" name="email" id="email" >
+                <input type="text" name="email" id="email" >
             </section>
             <section>
                 <label for="password">Enter Your Password</label>
@@ -22,5 +21,6 @@
             <p><a href="register.html.php" style="color:white;">No account yet? Register here.</a></p>
         </form>
         ';
-    session_destroy();
+    include_once "../footer.html.php";
+
 ?>

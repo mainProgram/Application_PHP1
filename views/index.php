@@ -9,4 +9,5 @@
             </div>        
         </section>
         ";
+    include_once "../footer.html.php";
 ?>
