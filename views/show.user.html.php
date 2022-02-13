@@ -2,9 +2,9 @@
     include_once "../header.html.php";
     include_once "../functions.php";
     
-    if(isset($_SESSION["email"])){
-        $file = "/opt/lampp/htdocs/Application_PHP1/registration.json";
-        $tabAllUsers = get_all_users($file);
+    $file = "/opt/lampp/htdocs/Application_PHP1/registration.json";
+    $tabAllUsers = get_all_users($file);
+    if(isset($_SESSION["email"]) && count($tabAllUsers)!=0){
         echo '
         <section class="showUser">
             <img src="../img/User Group_Flatline.svg">

@@ -1,0 +1,23 @@
+Différence entre include, include_onde, require, require_once ?
+inclure() :
+Cette fonction permet d'inclure un fichier dans une page PHP. Si la fonction include() n'est pas en mesure de trouver un fichier spécifié sur l'emplacement à ce moment-là, elle lancera un message d'avertissement, mais elle n'arrêtera pas l'exécution du script.
+
+require():
+Cette fonction est utilisée pour ajouter un fichier dans une page PHP. En cas de fonction require () si elle ne peut pas localiser un fichier spécifié à ce moment-là, cela générera une erreur fatale et arrêtera l'exécution du contenu.
+
+include_once() :
+Cette fonction est utilisée pour ajouter un fichier une seule fois à la fois. Si le code d'un fichier a déjà été inclus, il ne sera pas ajouté à nouveau si nous utilisons include_once(). S'il ne peut pas localiser un fichier spécifié à ce moment-là, il générera un message d'avertissement mais n'arrêtera pas l'exécution du contenu.
+
+require_once():
+Dans le cas où le code d'un fichier php a déjà été inclus, il ne sera pas inclus à nouveau si nous utilisons require_once(). Cela implique que require_once() ajoutera le fichier une seule fois à la fois. S'il ne peut pas localiser un fichier spécifié, il générera alors une erreur fatale mais arrêtera l'exécution du contenu.
+
+JSON (JavaScript Objet Notation) est un langage léger d’échange de données textuelles. Pour les ordinateurs, ce format se génère et s’analyse facilement. Pour les humains, il est pratique à écrire et à lire grâce à une syntaxe simple et à une structure en arborescence. JSON permet de représenter des données structurées (comme XML par exemple).
+
+
+Informatique
+Encodage désigne l'action de transcrire des données vers un format ou un protocole donné.
+
+json_encode
+json_decode
+
+<video muted autoplay loop>

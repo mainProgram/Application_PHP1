@@ -12,6 +12,7 @@
     <nav>
         <ul>
             <?php 
+                // AFFICHAGE DU MENU SELONS LES ROLES VISITEUR ET ADMIN, ET PAS ENCORE CONNECTÉ
                 if(isset($_SESSION["role"]) && $_SESSION["role"]=="visiteur")
                     echo '<a href="accueil.visiteur.html.php">Home<img src="../img/undraw_happy_feeling_slmw.svg" alt="" srcset=""></a>';
                 else if(isset($_SESSION["role"]) && $_SESSION["role"]=="admin"){
@@ -25,6 +26,7 @@
         </ul>
         <ul class="ul2">
             <?php
+                // SI LUSER EST CONNECTÉ PAS LA PEINE DE LUI MONTRER LE BOUTON SE CONNECTER
                 if(!isset($_SESSION["email"]))
                     echo '
                         <a href="login.html.php">Sign In<img src="../img/undraw_authentication_re_svpt.svg" altsrcset=""></a>';

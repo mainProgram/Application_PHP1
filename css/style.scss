@@ -1,0 +1,184 @@
+@import url("../metropolis.medium.otf");
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+    font-family: Metropolis, Helvetica, sans-serif;
+}
+
+nav{
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    height: 12vh;
+}
+
+a{
+    img{
+        width: 90px;
+    }
+    button{
+        text-decoration: none;
+        font-size: 25px;
+        color: rgb(166, 92, 235);
+    }
+    &:hover{
+        color: blueviolet;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    img{
+        width: 90px;
+    }
+    &:hover{
+        color: blueviolet;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
+
+ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ul2{
+    width: 30%;
+}
+
+.container{
+    position: relative;
+    height: 90%;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.buttons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: 900px;
+    }
+    button{
+        padding: 1rem 1rem;
+        outline: none;
+        border: 3px solid white;
+        border-radius: 1rem 1rem;
+        background-color: transparent;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    button:hover{
+        color: rgb(166, 92, 235);
+        background-color: white;   
+    }
+}
+input[type="submit"],input, select{
+    padding: 1rem 1rem;
+    outline: none;
+    border: 3px solid white;
+    border-radius: 1rem 1rem;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+input[type="submit"]:hover{
+    color: rgb(166, 92, 235);
+    background-color: white;   
+}
+.btn{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+.login, .register{
+    position: absolute;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 3rem 3rem;
+    height: 70%;
+    padding: 2%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.login *, .register *{
+    margin-bottom: 4%;
+}
+.login img{
+    width: 150px;
+}
+.register{
+    height: 90%;
+    padding: 1%;
+    width: 40%;
+    img{
+        width: 200px;
+    }
+    option{
+        color: rgb(166, 92, 235);
+    }
+}
+h1{
+    color: white;
+    font-size: 100px;
+}
+.admin, .showUser{
+    position: relative;
+}
+
+.showUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    img{
+        width: 200px;
+    }
+    h1{
+        font-size: 20px;
+    }
+}
+.error{
+    font-size: 14px;
+    color: red;
+}
+
+table, td, tr{
+    border: 2px solid white;
+}
+table{
+    border-collapse:collapse; 
+    border-spacing:0;
+    td, th{
+        width: 300px;
+        padding: 2%;
+        text-align: center;
+    }
+}

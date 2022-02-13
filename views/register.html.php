@@ -45,7 +45,7 @@
                 <label for="role">Choose Your Role</label>
                 <select name="role" id="role">
                     <option value="admin">Admin</option>
-                    <option value="visiteur">Visiteur</option>
+                    <option value="visiteur">Visitor</option>
                 </select>
             </section>
             <input type="submit" value="Register" name="inscription">

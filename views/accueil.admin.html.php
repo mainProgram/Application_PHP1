@@ -4,7 +4,7 @@
     if(isset($_SESSION["email"])){
         echo'<section class="admin">';
             if(isset($_SESSION["success_registration"])){
-                echo "<p style = 'font-size:25px;color: green;margin-top:-2%;'>".$_SESSION["success_registration"]."</p>";
+                echo "<p style = 'font-size:35px;color: green;margin-top:-2%;text-align:center'>".$_SESSION["success_registration"]."</p>";
                 unset($_SESSION["success_registration"]);
             }
             echo'

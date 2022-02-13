@@ -10,10 +10,8 @@
 
 
     if(isset($seConnecter)){
-        $_SESSION["email"] = $email;
         if(are_mail_and_password_correct($email, $password, $tabAllUsers)){
-            $rol = are_u_user_or_admin($email, $tabAllUsers);
-            if($rol=="admin")
+            if($_SESSION["role"]=="admin")
                 header("Location:../views/accueil.admin.html.php");
             else
                 header("Location:../views/accueil.visiteur.html.php");
@@ -25,7 +23,6 @@
     }
 
     if(isset($inscription)){
-        $_SESSION["email"] = $email;
         if(isset($email) && isset($password) && isset($confirmPassword) && !empty($email) && !empty($password) && !empty($confirmPassword)){
             if(is_mail_valid($email) && $password == $confirmPassword && strlen($password)>=8) 
             {
@@ -39,6 +36,9 @@
                         $_SESSION["error_registration"] = "Error ! try again.";
                     else{
                         $_SESSION["success_registration"] = "You have registered !";
+                        $tabAllUsers = get_all_users($file);
+                        $_SESSION["email"] = $email;
+                        $_SESSION["role"] = are_u_user_or_admin($email, $tabAllUsers);                    
                         if($role == "admin")
                             header("Location:../views/accueil.admin.html.php");
                         else
