@@ -4,6 +4,7 @@
     
     $file = "/opt/lampp/htdocs/Application_PHP1/registration.json";
     $tabAllUsers = get_all_users($file);
+    
     if(isset($_SESSION["email"]) && count($tabAllUsers)!=0){
         echo '
         <section class="showUser">

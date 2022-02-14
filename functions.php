@@ -52,6 +52,7 @@
         return json_decode(file_get_contents($file),true);
     }
 
+    //RETOURNE LE PROFIL DE LA PERSONNE CONNECTÉE
     function are_u_user_or_admin($mail, $tab){
         foreach($tab as $t)
             if(in_array($mail,$t))
