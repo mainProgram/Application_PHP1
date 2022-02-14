@@ -21,7 +21,8 @@
         echo'
             <section>
                 <label for="email">Enter Your Email</label>
-                <input type="text" name="email" id="email" >
+                <input type="text" name="email" id="email" value="';if(isset($_SESSION["email"])) echo $_SESSION["email"];
+                echo '" >
             </section>';
             if(isset($_SESSION["error_password"])){
                 echo "<p style = 'font-size:20px;color: red;margin-top:-5%;'>".$_SESSION["error_password"]."</p>";
@@ -44,8 +45,8 @@
             <section>
                 <label for="role">Choose Your Role</label>
                 <select name="role" id="role">
-                    <option value="admin">Admin</option>
                     <option value="visiteur">Visitor</option>
+                    <option value="admin">Admin</option>
                 </select>
             </section>
             <input type="submit" value="Register" name="inscription">

@@ -5,12 +5,12 @@
 
     $file = "/opt/lampp/htdocs/Application_PHP1/registration.json";
     $tabAllUsers = get_all_users($file);
-    $_SESSION["email"] = $email;
-    $_SESSION["role"] = are_u_user_or_admin($email, $tabAllUsers);
 
 
     if(isset($seConnecter)){
         if(are_mail_and_password_correct($email, $password, $tabAllUsers)){
+            $_SESSION["email"] = $email;
+            $_SESSION["role"] = are_u_user_or_admin($email, $tabAllUsers);
             if($_SESSION["role"]=="admin")
                 header("Location:../views/accueil.admin.html.php");
             else
